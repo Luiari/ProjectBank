@@ -6,9 +6,10 @@ namespace ProjectBank
 {
     class User
     {
-        private string _Username;
-        private string _Password;
-        
+        public string _Username = "Marre";
+        public string _Password = "Cykel";
+        bool isLocked = false;
+
         public string Username
         {
             get { return _Username; } set { _Username = "Marre"; }
@@ -18,6 +19,6 @@ namespace ProjectBank
             get { return _Password; } set { _Password = "Cykel"; }
         }
 
-        bool isLocked = false;
+        
     }
 }
