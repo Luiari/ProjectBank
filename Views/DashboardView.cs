@@ -30,7 +30,7 @@ namespace ProjectBank.Views
 
             void LogOut()
             {
-                LogInView.Run();
+                //LogInView.Run();
             }
         }
     }

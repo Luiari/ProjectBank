@@ -4,19 +4,16 @@ using System.Text;
 
 namespace ProjectBank
 {
-    class User
+    public class User
     {
-        public string _Username = "Marre";
-        public string _Password = "Cykel";
+        public string Username; 
+        public string password;
         bool isLocked = false;
 
-        public string Username
+        public User(string username, string password)
         {
-            get { return _Username; } set { _Username = "Marre"; }
-        }
-        public string Password
-        {
-            get { return _Password; } set { _Password = "Cykel"; }
+            this.Username = username;
+            this.password = password;
         }
 
         
