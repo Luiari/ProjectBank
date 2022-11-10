@@ -6,7 +6,14 @@ namespace ProjectBank
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string text = @"
+              /_\  _ __   __ _ _ __   __ _ ___   / __\ __ _ _ __ | | __
+             //_\\| '_ \ / _` | '_ \ / _` / __| /__\/// _` | '_ \| |/ /
+            /  _  \ | | | (_| | | | | (_| \__ \/ \/  \ (_| | | | |   < 
+            \_/ \_/_| |_|\__,_|_| |_|\__,_|___/\_____/\__,_|_| |_|_|\_\
+                                                           ";
+            Console.WriteLine(text);
+            
         }
     }
 }
