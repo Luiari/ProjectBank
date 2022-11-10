@@ -5,8 +5,9 @@ namespace ProjectBank.Views
 {
     public class DashboardView
     {
+        string Username;
         public static void Run()
-        {
+        {                      
             Console.Clear();
             string[] options = { "My Accounts", "Create Account", "Make a transaction", "Log out" };
             ViewUI viewUI = new ViewUI("Home", options, $"Welcome to ananas bank!");
@@ -26,10 +27,10 @@ namespace ProjectBank.Views
                     LogOut();
                     break;
             }
+
             void LogOut()
             {
-                Console.Clear();
-                Console.WriteLine("Logged out");
+                LogInView.Run();
             }
         }
     }
