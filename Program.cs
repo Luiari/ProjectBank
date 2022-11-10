@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ProjectBank
 {
@@ -6,7 +7,9 @@ namespace ProjectBank
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Login test = new Login();
+            test.Logint();
+            
         }
     }
 }
