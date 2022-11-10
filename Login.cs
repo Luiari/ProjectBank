@@ -18,13 +18,15 @@ namespace ProjectBank
              //_\\| '_ \ / _` | '_ \ / _` / __| /__\/// _` | '_ \| |/ /
             /  _  \ | | | (_| | | | | (_| \__ \/ \/  \ (_| | | | |   < 
             \_/ \_/_| |_|\__,_|_| |_|\__,_|___/\_____/\__,_|_| |_|_|\_\";
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(text);
 
-
+            Console.ForegroundColor = ConsoleColor.White;
             if (Username == "Marre" & Password == "Cykel")
             {
                 IsLocked = false;
-                Console.WriteLine("Welcome to your dashboard");
+                
+                Console.WriteLine("{0," + Console.WindowWidth / 2 + "}", "+Welcome to your dashboard+");
             }
             else
                 Console.WriteLine("Wrong username or password. Please try again");
