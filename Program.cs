@@ -7,7 +7,7 @@ namespace ProjectBank
     {       
         static void Main(string[] args)
         {
-            Startup.Run();            
+            Startup.Run();
         }
     }
 }
