@@ -9,10 +9,17 @@ namespace ProjectBank.Views
         {
             Console.Clear();
 
-            Console.WriteLine("test");
+            string accountList = Session.User.GetAccList()[0].accName;
+
+            //foreach (var item in Session.User.GetAccList())
+            //{
+            //    accountList = "Savings account";
+
+            //}
 
             string[] options = { "Exit" };
-            ViewUI viewUI = new ViewUI("My Accounts", options, $"Allkonto: 15 000sek\nSparkonto: 103 000sek");
+            ViewUI viewUI = new ViewUI("My Accounts", options, accountList);
+            
 
             
             int selectedOption = viewUI.Run();

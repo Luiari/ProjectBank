@@ -6,6 +6,9 @@ namespace ProjectBank.Views
 {
     public class LogInView
     {
+        
+
+        
         public static void Run(List<User> UsersList)
         {
             Console.Clear();
@@ -16,6 +19,8 @@ namespace ProjectBank.Views
             string prompt = "";
             int LoginAttempts = 3;
             bool IsLocked = false;
+            
+
             while (true)
             {
                 Console.Clear();
@@ -53,6 +58,8 @@ namespace ProjectBank.Views
                     {
                         Console.WriteLine("{0," + Console.WindowWidth / 2 + "}", "+Welcome to your dashboard+");
                         DashboardView.Run();
+                        //currentUser = UsersList.Find(u => u.Username == Username);
+                        //Session.User = UsersList.Find(u => u.Username == Username);
                     }               
                 }
                 else
@@ -65,9 +72,11 @@ namespace ProjectBank.Views
                 {
                     prompt = "You have attempt to many times. Your account is now locked. Please contact our costomer service";
                     IsLocked = true;
-                }                
+                }               
+
             }
-           
+            
         }
+        
     }
 }
