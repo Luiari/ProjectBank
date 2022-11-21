@@ -19,7 +19,7 @@ namespace ProjectBank.Views
             string prompt = "";
             int LoginAttempts = 3;
             bool IsLocked = false;
-            
+            bool Admin = true;
 
             while (true)
             {
@@ -36,30 +36,39 @@ namespace ProjectBank.Views
 
                 Console.WriteLine(" " + prompt);
 
-                Console.Write(" Usename: ");
+                Console.Write(" Username: ");
                 Username = Console.ReadLine();
                 try
                 {
                     Password = UsersList.Find(u => u.Username == Username).password;//Gets password from the username entered above
+                    Username= UsersList.Find(u => u.Username == "Admin").Username;
                 }
                 catch (Exception)
                 {
                     prompt = "This username does not exist";
                     throw;
                 }
-                
-                
+                Admin = Username == "Admin";
+
                 Console.Write(" Password: ");
                 inputPassword = Console.ReadLine();
 
+
+
+
                 if (inputPassword == Password )
                 {
+                    
+                    if (Admin == true)
+                    {
+                        Console.WriteLine("{0," + Console.WindowWidth / 2 + "}", "+Welcome Admin to Ananas Bank+");
+                        AdminDashboard.Run();
+                    }
                     if(!IsLocked)
                     {
                         Console.WriteLine("{0," + Console.WindowWidth / 2 + "}", "+Welcome to your dashboard+");
                         DashboardView.Run();
-                        //currentUser = UsersList.Find(u => u.Username == Username);
-                        //Session.User = UsersList.Find(u => u.Username == Username);
+                       
                     }               
                 }
                 else
@@ -72,8 +81,8 @@ namespace ProjectBank.Views
                 {
                     prompt = "You have attempt to many times. Your account is now locked. Please contact our costomer service";
                     IsLocked = true;
-                }               
-
+                }
+                
             }
             
         }

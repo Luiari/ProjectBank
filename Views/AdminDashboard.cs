@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
 namespace ProjectBank.Views
 {
-    public class DashboardView
+    public class AdminDashboard
     {
         string Username;
         public static void Run()
-        {                      
+        {
             Console.Clear();
-            string[] options = { "My Accounts", "Create Accounts","Make a transaction", "Log out" };
-            ViewUI viewUI = new ViewUI("Home", options, $"Welcome to ananas bank!");
-            int selectedOption = viewUI.Run();
-            switch (selectedOption)
+            string[] options = { "Customers", "Create new customer", "See transactions", "Log out" };
+            AdminViewUI adminviewUI = new AdminViewUI("Home", options, $"Welcome. Inlogged as Admin!");
+            int selectedOptions = adminviewUI.Run();
+            switch (selectedOptions)
             {
                 case 0:
-                    MyAccountsView.Run();
+                    AdminCustomerView.Run();
                     break;
                 case 1:
-                    //Open CreateAccountView
+                    //Open CreateCustomerView
                     break;
                 case 2:
-                    //Open MakeTrasactionView
+                    //Open SeeTrasactionsView
                     break;
                 case 3:
                     LogOut();
