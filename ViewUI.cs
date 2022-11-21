@@ -9,16 +9,20 @@ namespace ProjectBank
         private string body;
         private string[] Options;
         private int SelectedOption = 0;
+        
+        
         public ViewUI(string title, string[] menuOptions)
         {
             this.title = title;
             this.Options = menuOptions;
+            
         }
         public ViewUI(string title, string[] menuOptions, string body)
         {
             this.title = title;
             this.Options = menuOptions;
             this.body = body;
+            
         }
         void UpdateUi()
         {

@@ -9,9 +9,5 @@ namespace ProjectBank
         
         public static User User { get; set; }
 
-        //public Session(User user)
-        //{
-        //    this.User = user;
-        //}
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace ProjectBank
-{
+{   
     public class Accounts
     {
         public string accName;
@@ -15,6 +15,6 @@ namespace ProjectBank
             this.accName = accName;
             this.accNum = accNum;
             this.amount = amount;
-        }
-    }
+        }     
+}
 }
