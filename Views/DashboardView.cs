@@ -20,8 +20,8 @@ namespace ProjectBank.Views
                 case 1:
                     //Open CreateAccountView
                     break;
-                case 2:
-                    //Open MakeTrasactionView
+                case 2:                   
+                    TransactionView.Run();                   
                     break;
                 case 3:
                     LogOut();

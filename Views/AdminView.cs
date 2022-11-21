@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-namespace ProjectBank
+
+namespace ProjectBank.Views
 {
-    public class ViewUI
+    class AdminView
     {
         private string title;
         private string body;
         private string[] Options;
         private int SelectedOption = 0;
-        
-        
-        public ViewUI(string title, string[] menuOptions)
+        public AdminView(string title, string[] menuOptions)
         {
             this.title = title;
             this.Options = menuOptions;
-            
         }
-        public ViewUI(string title, string[] menuOptions, string body)
+        public AdminView(string title, string[] menuOptions, string body)
         {
             this.title = title;
             this.Options = menuOptions;
             this.body = body;
-            
         }
         void UpdateUi()
         {

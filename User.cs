@@ -23,10 +23,22 @@ namespace ProjectBank
             AccList.Add(A);
         }
 
-        public List<Accounts> GetAccList()
+        public string GetAccList()
         {
-            return AccList;
+            
+            string accountList = "";
+            foreach (var item in AccList)
+            {
+                accountList += $"{item.accName}\n" +
+                               $"{item.accNum}            {item.amount} sek\n" +
+                               $"-------------------------------\n";
+            }
+
+            return accountList;
         }
+
+        
+            
 
     }
 }
