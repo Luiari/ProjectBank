@@ -19,6 +19,7 @@ namespace ProjectBank.Views
             string prompt = "";
             int LoginAttempts = 3;
             bool IsLocked = false;
+            bool Admin = true;
             
 
             while (true)
@@ -47,14 +48,21 @@ namespace ProjectBank.Views
                     prompt = "This username does not exist";
                     throw;
                 }
-                
-                
+
+                Admin = Username == "Admin";
+
                 Console.Write(" Password: ");
                 inputPassword = Console.ReadLine();
 
                 if (inputPassword == Password )
                 {
-                    if(!IsLocked)
+                    if (Admin == true)
+                    {
+                        Console.WriteLine("{0," + Console.WindowWidth / 2 + "}", "+Welcome Admin to Ananas Bank+");
+                        AdminDashboard.Run(UsersList);
+                    }
+
+                    if (!IsLocked)
                     {
                         Console.WriteLine("{0," + Console.WindowWidth / 2 + "}", "+Welcome to your dashboard+");
                         DashboardView.Run();
