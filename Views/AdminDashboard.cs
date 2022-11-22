@@ -14,7 +14,7 @@ namespace ProjectBank.Views
             
 
             string[] options = { "Customers", "Create new customer", "See transactions", "Log out" };
-            AdminView adminviewUI = new AdminView("Home", options, $"Welcome. Inlogged as Admin!");
+            ViewUI adminviewUI = new ViewUI("Home", options, $"Welcome. Inlogged as Admin!");
             int selectedOptions = adminviewUI.Run();
             switch (selectedOptions)
             {

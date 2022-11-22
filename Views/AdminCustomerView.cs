@@ -16,7 +16,7 @@ namespace ProjectBank.Views
             }
 
             string[] options = { "Exit" };
-            AdminView viewUI = new AdminView(userList, options);
+            ViewUI viewUI = new ViewUI(userList, options);
             int selectedOption = viewUI.Run();
             switch (selectedOption)
             {
