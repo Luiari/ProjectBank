@@ -4,6 +4,7 @@ Antonio Ariza Gomez
 Simon Frändén
 
 Link to UML: https://gyazo.com/ce6892f81d00b8ca244873a34bd366cb
+Link to Milanote: https://gyazo.com/f56252ef5fd9ca5b87b3a71b87fb39ec
 
 Classes
 AdminCustomerView.cs
