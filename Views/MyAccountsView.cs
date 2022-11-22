@@ -14,8 +14,7 @@ namespace ProjectBank.Views
             string[] options = { "Exit" };
             ViewUI viewUI = new ViewUI("My Accounts", options, accountList);
             
-
-            
+           
             int selectedOption = viewUI.Run();
             switch (selectedOption)
             {

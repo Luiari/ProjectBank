@@ -12,7 +12,7 @@ namespace ProjectBank.Views
             foreach (var item in users)
             {
                 userList += $"{item.Username}\n" +
-                               $"-------------------------------\n";
+                            $"-------------------------------\n";
             }
 
             string[] options = { "Exit" };

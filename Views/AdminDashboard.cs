@@ -22,7 +22,7 @@ namespace ProjectBank.Views
                     AdminCustomerView.Run(users);
                     break;
                 case 1:
-                    //Open CreateCustomerView
+                    CreateCustomerView.Run(users);
                     break;
                 case 2:
                     //Open SeeTrasactionsView

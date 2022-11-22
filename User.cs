@@ -16,7 +16,7 @@ namespace ProjectBank
             this.password = password;
         }
 
-        List<Accounts> AccList = new List<Accounts>();
+        public List<Accounts> AccList = new List<Accounts>();
 
         public void AddAcc(Accounts A)
         {

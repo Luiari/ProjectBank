@@ -33,9 +33,7 @@ namespace ProjectBank
             Users.Add(User2);
             Users.Add(User3);
             Users.Add(User4);
-
-            
-
+           
             LogInView.Run(Users);
         }
 

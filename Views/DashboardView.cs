@@ -10,7 +10,7 @@ namespace ProjectBank.Views
         {                      
             Console.Clear();
             string[] options = { "My Accounts", "Create Account", "Make a transaction", "Log out" };
-            ViewUI viewUI = new ViewUI("Home", options, $"Welcome to ananas bank!");
+            ViewUI viewUI = new ViewUI("Home", options, $"Welcome to ananas bank {Session.User.Username}!");
             int selectedOption = viewUI.Run();
             switch (selectedOption)
             {
@@ -18,7 +18,7 @@ namespace ProjectBank.Views
                     MyAccountsView.Run();
                     break;
                 case 1:
-                    //Open CreateAccountView
+                    CreateAccountView.Run();
                     break;
                 case 2:                   
                     TransactionView.Run();                   

@@ -65,9 +65,8 @@ namespace ProjectBank.Views
                     if (!IsLocked)
                     {
                         Console.WriteLine("{0," + Console.WindowWidth / 2 + "}", "+Welcome to your dashboard+");
-                        DashboardView.Run();
-                        //currentUser = UsersList.Find(u => u.Username == Username);
-                        //Session.User = UsersList.Find(u => u.Username == Username);
+                        Session.User = UsersList.Find(u => u.Username == Username);
+                        DashboardView.Run();                                                
                     }               
                 }
                 else
